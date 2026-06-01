@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+
+<div class="container">
+
+    <h1><i class="fa-solid fa-graduation-cap"></i> CGPA Calculator</h1>
+    <p>Calculate your CGPA instantly for up to 8 semesters</p>
+
+    <div class="section">
+
+        <label><i class="fa-solid fa-layer-group"></i>  Select Number of Semesters</label>
+
+        <select id="semesterCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+
+        <div id="semesterInputs"></div>
+
+        <p id="errorMsg"></p>
+
+        <button onclick="calculateCGPA()"><i class="fa-solid fa-calculator"></i>
+            Calculate CGPA
+        </button>
+
+        <div id="result">
+            CGPA: 0.00
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="section">
+
+        <h3><i class="fa-solid fa-bullseye"></i> Target CGPA Planner</h3>
+
+        <input
+            type="number"
+            id="targetCGPA"
+            step="0.01"
+            placeholder="Enter Target CGPA">
+
+        <button onclick="calculateTargetCGPA()"><i class="fa-solid fa-bullseye"></i>
+            Calculate Required SGPA
+        </button>
+
+        <p id="targetResult"></p>
+
+    </div>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <h4><i class="fa-solid fa-arrow-trend-up"></i> Highest SGPA</h4>
+            <p id="highestSGPA">0.00</p>
+        </div>
+
+        <div class="stat-card">
+            <h4><i class="fa-solid fa-arrow-trend-down"></i> Lowest SGPA</h4>
+            <p id="lowestSGPA">0.00</p>
+        </div>
+
+        <div class="stat-card">
+            <h4><i class="fa-solid fa-chart-line"></i> Average SGPA</h4>
+            <p id="averageSGPA">0.00</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
